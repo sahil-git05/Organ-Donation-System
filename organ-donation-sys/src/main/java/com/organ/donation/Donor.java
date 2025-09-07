@@ -1,6 +1,11 @@
 package com.organ.donation;
+import jakarta. persistence.*;
 
+@Entity
+@Table(name = "donors")
 public class Donor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
        private Long id;
     private String name;
     private String email;
